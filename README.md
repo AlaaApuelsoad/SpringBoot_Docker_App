@@ -29,6 +29,9 @@ Docker Compose is a tool for defining and running multi-container Docker applica
 ### **6. Docker Volume**
 A volume is a persistent storage mechanism that allows data to persist beyond the lifecycle of a container.
 
+### **7. Docker Network**
+A Docker network is a virtual network that allows Docker containers to communicate with each other, as well as with the host system and external networks. It helps manage the communication between containers in a secure and isolated manner.
+
 ---
 ## **Project Structure**
 ```
