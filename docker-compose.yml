@@ -1,30 +1,19 @@
-version: '3.8'
-
 services:
-  postgres_db:
-    image: postgres:latest
-    container_name: postgres_container
-    restart: always
-    environment:
-      POSTGRES_DB:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 0000
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
   spring_app:
-    build: .
-    container_name: spring_boot_container
-    depends_on:
-      - postgres_db
+    image: dockerapp-spring_app
+    container_name: spring_app
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres_db:5432/demo
-      SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: 0000
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-container:5432/demo
+      SPRING_DATASOURCE_USERNAME: spring
+      SPRING_DATASOURCE_PASSWORD: 123456
+    networks:
+      - aabouelsoud
 
-volumes:
-  postgres_data:
+networks:
+  aabouelsoud:
+    external: true
