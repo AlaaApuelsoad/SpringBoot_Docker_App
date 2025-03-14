@@ -171,6 +171,8 @@ By using Docker and Docker Compose, we containerized our Spring Boot application
 | `docker-compose up -d` | Start all services in background |
 | `docker-compose down` | Stop and remove containers |
 | `docker volume ls` | List volumes |
+| `docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}"` | ports mapping for running containers|
+
 
 ### 🎯 **Now your Spring Boot app is running inside Docker with PostgreSQL! 🚀**
 
