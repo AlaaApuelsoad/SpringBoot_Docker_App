@@ -32,6 +32,9 @@ A volume is a persistent storage mechanism that allows data to persist beyond th
 ### **7. Docker Network**
 A Docker network is a virtual network that allows Docker containers to communicate with each other, as well as with the host system and external networks. It helps manage the communication between containers in a secure and isolated manner.
 
+### **8. Docker Deamon**
+The Docker Daemon (dockerd) is the background service that runs on your machine and manages Docker containers, images, networks, and volumes. It listens for Docker API requests and handles container operations.
+
 ---
 ## **Project Structure**
 ```
