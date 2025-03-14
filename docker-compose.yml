@@ -1,12 +1,12 @@
 services:
   spring_app:
-    image: dockerapp-spring_app
+    image: first_spring_docker_app
     container_name: spring_app
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "8080:80"
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-container:5432/demo
       SPRING_DATASOURCE_USERNAME: spring

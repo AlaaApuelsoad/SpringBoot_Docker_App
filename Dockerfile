@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/DockerApp-0.0.1-SNAPSHOT.jar DockerApp-0.0.1-SNAPSHOT.jar
 
 # Expose the application port
-EXPOSE 8080
+EXPOSE 80
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "DockerApp-0.0.1-SNAPSHOT.jar"]
